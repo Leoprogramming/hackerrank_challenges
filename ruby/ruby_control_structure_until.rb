@@ -1,9 +1,13 @@
 # Call the method coder.practice until coder.oh_one? becomes true.
 # Use the until control structure.
 
-until coder.oh_one?
-  do oder.practice
-end
+coder.practice until coder.oh_one?
+
+# OR
+
+# until coder.oh_one?
+#   do oder.practice
+# end
 
 # OR
 
