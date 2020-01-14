@@ -4,8 +4,20 @@
 # Complete the simpleArraySum function below.
 #
 def simpleArraySum(ar)
-    ar.sum
+  ar.sum
 end
+
+# USING INJECT ->
+
+# def simpleArraySum(ar)
+#   ar.inject(:+)
+# end
+
+# IN CASE OF ARRAYS OF ARRAYS ->
+
+# def simpleArraySum(ar)
+#   ar.map.inject(:+)
+# end
 
 fptr = File.open(ENV['OUTPUT_PATH'], 'w')
 
