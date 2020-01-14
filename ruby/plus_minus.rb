@@ -13,7 +13,7 @@ require 'stringio'
 
 # Complete the plusMinus function below.
 def plus_minus(arr)
-  arr_size = arr.size
+  # arr_size = arr.size
   [:positive?, :negative?, :zero?].each do |action|
     p arr.count(&action).to_f / arr_size
   end
