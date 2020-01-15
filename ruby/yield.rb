@@ -7,6 +7,7 @@ puts array_times_by_three
 
 def introduction(object)
   yield(object)
+  puts 'Nice to meet you!'
   yield('Alex')
   yield(object)
   yield('Brett')
