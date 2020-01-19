@@ -6,10 +6,8 @@
 # lambda_message_printer prints the message inside a Lambda.
 
 def block_message_printer
-  message = "Welcome to Block Message Printer"
-  if block_given?
-    yield
-  end
+  message = 'Welcome to Block Message Printer'
+  yield if block_given?
   puts "But in this function/method message is :: #{message}"
 end
 
@@ -19,8 +17,8 @@ block_message_printer { puts "This message remembers message :: #{message}" }
 #####################################################################################
 
 def proc_message_printer(my_proc)
-  message = "Welcome to Proc Message Printer"
-  my_proc.()             #Call my_proc
+  message = 'Welcome to Proc Message Printer'
+  my_proc.() # Call my_proc
   puts "But in this function/method message is :: #{message}"
 end
 
@@ -30,8 +28,8 @@ proc_message_printer(my_proc)
 ######################################################################################
 
 def lambda_message_printer(my_lambda)
-  message = "Welcome to Lambda Message Printer"
-  my_lambda.call         #Call my_lambda
+  message = 'Welcome to Lambda Message Printer'
+  my_lambda.call # Call my_lambda
   puts "But in this function/method message is :: #{message}"
 end
 
@@ -39,4 +37,3 @@ my_lambda = -> { puts "This message remembers message :: #{message}" }
 lambda_message_printer(my_lambda)
 
 ######################################################################################
-
