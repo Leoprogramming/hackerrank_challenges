@@ -8,11 +8,24 @@
 
 # Apply the helper method in completing your main method.
 
-def mask_article(text, words)
-  words.each { |a| text.gsub!(a, strike(a)) }
-  text
+def mask_article(str, words_array)
+  new_str = str
+  words_array.each do |word|
+    new_str.gsub! word, strike(word) if new_str.include? word
+  end
+
+  new_str
 end
 
-def strike(s)
-  "<strike>#{s}</strike>"
+def strike(str)
+  '<strike>' + str + '</strike>'
 end
+
+# def mask_article(text, words)
+#   words.each { |a| text.gsub!(a, strike(a)) }
+#   text
+# end
+
+# def strike(s)
+#   "<strike>#{s}</strike>"
+# end
